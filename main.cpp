@@ -33,6 +33,7 @@ int main()
   cin >> x[n];
 
   deltaX = (x[n] - x[0])/double(n); //sets step
+  cout << deltaX << endl;
 
   cout << "Does the question give you a function?(Y/N) ";
   cin >> ans;
