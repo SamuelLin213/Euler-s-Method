@@ -33,7 +33,7 @@ int main()
   cin >> x[n];
 
   deltaX = (x[n] - x[0])/double(n); //sets step
-  cout << deltaX << endl;
+  cout << "Delta X: " << deltaX << endl;
 
   cout << "Does the question give you a function?(Y/N) ";
   cin >> ans;
@@ -66,7 +66,7 @@ int main()
 void compute1(double x[], double y[], double deltaY[], double m[], double yNew[], int n, double deltaX)
 {
   //computes first line
-  m[0] = 2*x[0] - y[0]; //change according to given formula
+  m[0] = x[0] + 2; //change according to given formula
   deltaY[0] = m[0] * deltaX;
   yNew[0] = y[0] + deltaY[0];
 
@@ -74,7 +74,7 @@ void compute1(double x[], double y[], double deltaY[], double m[], double yNew[]
   {
     x[z] = x[z-1] + deltaX;
     y[z] = yNew[z-1];
-    m[z] = 2*x[z] - y[z]; //change according to given formula
+    m[z] = x[z] + 2; //change according to given formula
     deltaY[z] = m[z] * deltaX;
     yNew[z] = y[z] + deltaY[z];
   }
